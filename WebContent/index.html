@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Apache Camel Demo</title>
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="controller/Controller.js"></script>
+<style type="text/css">
+span {
+	display: block;
+	padding: 10px;
+	font-family: verdana;
+	font-size: large;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+	font-size: medium;
+}
+
+input {
+	width: 450px;
+	height: 50px;
+	font-size: x-large;
+	padding: 5px;
+}
+</style>
+</head>
+<body ng-app='angularJSLoginForm' ng-controller='LoginController'>
+	<div style="background-color: black; width: 50%; vertical-align: middle;" align="center">
+		<form style="vertical-align: middle;"">
+			<span>
+				<label style="color: white;">Username : </label>
+				<input type="text" id="userName" placeholder="Username" ng-model='userName'/>
+			</span>
+			<span>
+				<label style="color: white;">Password : </label>
+				<input type="password" id="userPassword" placeholder="Password" ng-model='userPassword'/>
+			</span>
+				<button type="button" id="facebookBtn" ng-click='facebookLogin()'>Login with Facebook</button>
+				<button type="button" id="linkedinBtn" ng-click='linkedInLogin()'>Login with LinkedIn</button>
+		</form>
+	</div>
+		
+	<div id="mainDiv" ng-view>
+	</div>
+</body>
+</html>
